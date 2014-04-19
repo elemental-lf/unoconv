@@ -362,7 +362,7 @@ class FmtList:
 fmts = FmtList()
 
 ### TextDocument
-fmts.add('document', 'bib', 'bib', 'BibTeX', 'BibTeX_Writer') ### 22
+fmts.add('document', 'bib', 'bib', 'BibTeX', 'org.openoffice.da.writer2bibtex') ### 22
 fmts.add('document', 'doc', 'doc', 'Microsoft Word 97/2000/XP', 'MS Word 97') ### 29
 fmts.add('document', 'doc6', 'doc', 'Microsoft Word 6.0', 'MS WinWord 6.0') ### 24
 fmts.add('document', 'doc95', 'doc', 'Microsoft Word 95', 'MS Word 95') ### 28
@@ -371,7 +371,7 @@ fmts.add('document', 'docx', 'docx', 'Microsoft Office Open XML', 'Office Open X
 fmts.add('document', 'docx7', 'docx', 'Microsoft Office Open XML', 'MS Word 2007 XML')
 fmts.add('document', 'fodt', 'fodt', 'OpenDocument Text (Flat XML)', 'OpenDocument Text Flat XML')
 fmts.add('document', 'html', 'html', 'HTML Document (OpenOffice.org Writer)', 'HTML (StarWriter)') ### 3
-fmts.add('document', 'latex', 'ltx', 'LaTeX 2e', 'LaTeX_Writer') ### 31
+fmts.add('document', 'latex', 'ltx', 'LaTeX 2e', 'org.openoffice.da.writer2latex') ### 31
 fmts.add('document', 'mediawiki', 'txt', 'MediaWiki', 'MediaWiki')
 fmts.add('document', 'odt', 'odt', 'ODF Text Document', 'writer8') ### 10
 fmts.add('document', 'ooxml', 'xml', 'Microsoft Office Open XML', 'MS Word 2003 XML') ### 11
