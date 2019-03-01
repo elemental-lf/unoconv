@@ -385,6 +385,8 @@ fmts.add('document', 'txt', 'txt', 'Text', 'Text') ### 34
 fmts.add('document', 'uot', 'uot', 'Unified Office Format text','UOF text') ### 27
 fmts.add('document', 'xhtml', 'html', 'XHTML Document', 'XHTML Writer File') ### 33
 fmts.add('document', 'epub', 'epub', 'Electronic Publication', 'EPUB')
+fmts.add('document', 'png', 'png', 'Portable Network Graphic', 'writer_png_Export') ### 2
+fmts.add('document', 'jpg', 'jpg', 'Joint Photographic Experts Group', 'writer_jpg_Export')
 
 ### WebDocument
 fmts.add('web', 'etext', 'txt', 'Text Encoded (OpenOffice.org Writer/Web)', 'Text (encoded) (StarWriter/Web)') ### 14
@@ -420,6 +422,8 @@ fmts.add('spreadsheet', 'xlt', 'xlt', 'Microsoft Excel 97/2000/XP Template', 'MS
 fmts.add('spreadsheet', 'xlt5', 'xlt', 'Microsoft Excel 5.0 Template', 'MS Excel 5.0/95 Vorlage/Template') ### 28
 fmts.add('spreadsheet', 'xlt95', 'xlt', 'Microsoft Excel 95 Template', 'MS Excel 95 Vorlage/Template') ### 21
 fmts.add('spreadsheet', 'xlsx', 'xlsx', 'Microsoft Excel 2007/2010 XML', 'Calc MS Excel 2007 XML')
+fmts.add('spreadsheet', 'png', 'png', 'Portable Network Graphic', 'calc_png_Export')
+fmts.add('spreadsheet', 'jpg', 'jpg', 'Joint Photographic Experts Group', 'calc_jpg_Export')
 
 ### Graphics
 fmts.add('graphics', 'bmp', 'bmp', 'Windows Bitmap', 'draw_bmp_Export') ### 21
