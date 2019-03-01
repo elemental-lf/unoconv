@@ -27,7 +27,7 @@ import time
 
 __version__ = '0.8.2'
 
-doctypes = ('document', 'graphics', 'presentation', 'spreadsheet')
+doctypes = ('document', 'web', 'global', 'spreadsheet', 'graphics', 'presentation', 'formula', 'database')
 
 global convertor, office, ooproc, product
 ooproc = None
@@ -371,6 +371,7 @@ fmts.add('document', 'docx', 'docx', 'Microsoft Office Open XML', 'Office Open X
 fmts.add('document', 'docx7', 'docx', 'Microsoft Office Open XML', 'MS Word 2007 XML')
 fmts.add('document', 'fodt', 'fodt', 'OpenDocument Text (Flat XML)', 'OpenDocument Text Flat XML')
 fmts.add('document', 'html', 'html', 'HTML Document (OpenOffice.org Writer)', 'HTML (StarWriter)') ### 3
+fmts.add('document', 'html', 'htm', 'HTML Document (OpenOffice.org Writer)', 'HTML (StarWriter)') ### 3
 fmts.add('document', 'latex', 'ltx', 'LaTeX 2e', 'org.openoffice.da.writer2latex') ### 31
 fmts.add('document', 'mediawiki', 'txt', 'MediaWiki', 'MediaWiki')
 fmts.add('document', 'odt', 'odt', 'ODF Text Document', 'writer8') ### 10
@@ -384,6 +385,10 @@ fmts.add('document', 'text', 'txt', 'Text Encoded', 'Text (encoded)') ### 26
 fmts.add('document', 'txt', 'txt', 'Text', 'Text') ### 34
 fmts.add('document', 'uot', 'uot', 'Unified Office Format text','UOF text') ### 27
 fmts.add('document', 'xhtml', 'html', 'XHTML Document', 'XHTML Writer File') ### 33
+fmts.add('document', 'xhtml', 'htm', 'XHTML Document', 'XHTML Writer File') ### 33
+fmts.add('document', 'xhtml', 'xht', 'XHTML Document', 'XHTML Writer File') ### 33
+fmts.add('document', 'xhtml', 'xhtml', 'XHTML Document', 'XHTML Writer File') ### 33
+fmts.add('document', 'xhtml', 'xml', 'XHTML Document', 'XHTML Writer File') ### 33
 fmts.add('document', 'epub', 'epub', 'Electronic Publication', 'EPUB')
 fmts.add('document', 'png', 'png', 'Portable Network Graphic', 'writer_png_Export') ### 2
 fmts.add('document', 'jpg', 'jpg', 'Joint Photographic Experts Group', 'writer_jpg_Export')
@@ -392,7 +397,8 @@ fmts.add('document', 'jpg', 'jpg', 'Joint Photographic Experts Group', 'writer_j
 fmts.add('web', 'etext', 'txt', 'Text Encoded (OpenOffice.org Writer/Web)', 'Text (encoded) (StarWriter/Web)') ### 14
 fmts.add('web', 'html10', 'html', 'OpenOffice.org 1.0 HTML Template', 'writer_web_StarOffice_XML_Writer_Web_Template') ### 11
 fmts.add('web', 'html', 'html', 'HTML Document', 'HTML') ### 2
-fmts.add('web', 'html', 'html', 'HTML Document Template', 'writerweb8_writer_template') ### 13
+fmts.add('web', 'html', 'htm', 'HTML Document', 'HTML') ### 2
+fmts.add('web', 'htmlt', 'html', 'HTML Document Template', 'writerweb8_writer_template') ### 13
 fmts.add('web', 'mediawiki', 'txt', 'MediaWiki', 'MediaWiki_Web') ### 9
 fmts.add('web', 'pdf', 'pdf', 'PDF - Portable Document Format', 'writer_web_pdf_Export') ### 10
 fmts.add('web', 'sdw', 'sdw', 'StarWriter 5.0 (OpenOffice.org Writer/Web)', 'StarWriter 5.0 (StarWriter/Web)') ### 5
@@ -400,12 +406,24 @@ fmts.add('web', 'txt', 'txt', 'OpenOffice.org Text (OpenOffice.org Writer/Web)',
 fmts.add('web', 'text10', 'txt', 'OpenOffice.org 1.0 Text Document (OpenOffice.org Writer/Web)', 'writer_web_StarOffice_XML_Writer') ### 15
 fmts.add('web', 'text', 'txt', 'Text (OpenOffice.org Writer/Web)', 'Text (StarWriter/Web)') ### 8
 
-### Spreadsheet
+### GlobalDocument
+fmts.add('global', 'html', 'htm', 'HTML (Writer/Global)', 'writerglobal8_HTML') ### 6
+fmts.add('global', 'html', 'html', 'HTML (Writer/Global)', 'writerglobal8_HTML') ### 6
+fmts.add('global', 'odm', 'odm', 'ODF Master Document', 'writerglobal8') ### 7
+fmts.add('global', 'odt', 'odt', 'ODF Text Document', 'writerglobal8_writer') ### 8
+fmts.add('global', 'pdf', 'pdf', 'PDF - Portable Document Format', 'writer_globaldocument_pdf_Export') ### 11
+fmts.add('global', 'sgl', 'sgl', 'StarWriter 5.0', 'StarWriter 5.0 (StarWriter/GlobalDocument)') ### 5
+fmts.add('global', 'sxg', 'sxg', 'OpenOffice.org 1.0 Master Document', 'writer_globaldocument_StarOffice_XML_Writer_GlobalDocument') ### 1
+fmts.add('global', 'sxw', 'sxw', 'OpenOffice.org 1.0 Text Document', 'writer_globaldocument_StarOffice_XML_Writer') ### 12
+fmts.add('global', 'txt', 'txt', 'Text Encoded (OpenOffice.org Master Document)', 'Text (encoded) (StarWriter/GlobalDocument)') ### 2
+
+### SpreadsheetDocument
 fmts.add('spreadsheet', 'csv', 'csv', 'Text CSV', 'Text - txt - csv (StarCalc)') ### 16
 fmts.add('spreadsheet', 'dbf', 'dbf', 'dBASE', 'dBase') ### 22
 fmts.add('spreadsheet', 'dif', 'dif', 'Data Interchange Format', 'DIF') ### 5
 fmts.add('spreadsheet', 'fods', 'fods', 'OpenDocument Spreadsheet (Flat XML)', 'OpenDocument Spreadsheet Flat XML')
 fmts.add('spreadsheet', 'html', 'html', 'HTML Document (OpenOffice.org Calc)', 'HTML (StarCalc)') ### 7
+fmts.add('spreadsheet', 'html', 'htm', 'HTML Document (OpenOffice.org Calc)', 'HTML (StarCalc)') ### 7
 fmts.add('spreadsheet', 'ods', 'ods', 'ODF Spreadsheet', 'calc8') ### 15
 fmts.add('spreadsheet', 'ooxml', 'xml', 'Microsoft Excel 2003 XML', 'MS Excel 2003 XML') ### 23
 fmts.add('spreadsheet', 'ots', 'ots', 'ODF Spreadsheet Template', 'calc8_template') ### 14
@@ -414,7 +432,11 @@ fmts.add('spreadsheet', 'slk', 'slk', 'SYLK', 'SYLK') ### 35
 fmts.add('spreadsheet', 'stc', 'stc', 'OpenOffice.org 1.0 Spreadsheet Template', 'calc_StarOffice_XML_Calc_Template') ### 2
 fmts.add('spreadsheet', 'sxc', 'sxc', 'OpenOffice.org 1.0 Spreadsheet', 'StarOffice XML (Calc)') ### 3
 fmts.add('spreadsheet', 'uos', 'uos', 'Unified Office Format spreadsheet', 'UOF spreadsheet') ### 9
+fmts.add('spreadsheet', 'xhtml', 'html', 'XHTML', 'XHTML Calc File') ### 26
+fmts.add('spreadsheet', 'xhtml', 'htm', 'XHTML', 'XHTML Calc File') ### 26
+fmts.add('spreadsheet', 'xhtml', 'xht', 'XHTML', 'XHTML Calc File') ### 26
 fmts.add('spreadsheet', 'xhtml', 'xhtml', 'XHTML', 'XHTML Calc File') ### 26
+fmts.add('spreadsheet', 'xhtml', 'xml', 'XHTML', 'XHTML Calc File') ### 26
 fmts.add('spreadsheet', 'xls', 'xls', 'Microsoft Excel 97/2000/XP', 'MS Excel 97') ### 12
 fmts.add('spreadsheet', 'xls5', 'xls', 'Microsoft Excel 5.0', 'MS Excel 5.0/95') ### 8
 fmts.add('spreadsheet', 'xls95', 'xls', 'Microsoft Excel 95', 'MS Excel 95') ### 10
@@ -432,6 +454,7 @@ fmts.add('graphics', 'eps', 'eps', 'Encapsulated PostScript', 'draw_eps_Export')
 fmts.add('graphics', 'fodg', 'fodg', 'OpenDocument Drawing (Flat XML)', 'OpenDocument Drawing Flat XML')
 fmts.add('graphics', 'gif', 'gif', 'Graphics Interchange Format', 'draw_gif_Export') ### 30
 fmts.add('graphics', 'html', 'html', 'HTML Document (OpenOffice.org Draw)', 'draw_html_Export') ### 37
+fmts.add('graphics', 'html', 'htm', 'HTML Document (OpenOffice.org Draw)', 'draw_html_Export') ### 37
 fmts.add('graphics', 'jpg', 'jpg', 'Joint Photographic Experts Group', 'draw_jpg_Export') ### 3
 fmts.add('graphics', 'met', 'met', 'OS/2 Metafile', 'draw_met_Export') ### 43
 fmts.add('graphics', 'odd', 'odd', 'OpenDocument Drawing', 'draw8') ### 6
@@ -450,16 +473,21 @@ fmts.add('graphics', 'swf', 'swf', 'Macromedia Flash (SWF)', 'draw_flash_Export'
 fmts.add('graphics', 'sxd', 'sxd', 'OpenOffice.org 1.0 Drawing', 'StarOffice XML (Draw)') ### 26
 fmts.add('graphics', 'tiff', 'tiff', 'Tagged Image File Format', 'draw_tif_Export') ### 13
 fmts.add('graphics', 'wmf', 'wmf', 'Windows Metafile', 'draw_wmf_Export') ### 8
+fmts.add('graphics', 'xhtml', 'html', 'XHTML', 'XHTML Draw File') ### 45
+fmts.add('graphics', 'xhtml', 'htm', 'XHTML', 'XHTML Draw File') ### 45
+fmts.add('graphics', 'xhtml', 'xht', 'XHTML', 'XHTML Draw File') ### 45
 fmts.add('graphics', 'xhtml', 'xhtml', 'XHTML', 'XHTML Draw File') ### 45
+fmts.add('graphics', 'xhtml', 'xml', 'XHTML', 'XHTML Draw File') ### 45
 fmts.add('graphics', 'xpm', 'xpm', 'X PixMap', 'draw_xpm_Export') ### 19
 
-### Presentation
+### PresentationDocument
 fmts.add('presentation', 'bmp', 'bmp', 'Windows Bitmap', 'impress_bmp_Export') ### 15
 fmts.add('presentation', 'emf', 'emf', 'Enhanced Metafile', 'impress_emf_Export') ### 16
 fmts.add('presentation', 'eps', 'eps', 'Encapsulated PostScript', 'impress_eps_Export') ### 17
 fmts.add('presentation', 'fodp', 'fodp', 'OpenDocument Presentation (Flat XML)', 'OpenDocument Presentation Flat XML')
 fmts.add('presentation', 'gif', 'gif', 'Graphics Interchange Format', 'impress_gif_Export') ### 18
 fmts.add('presentation', 'html', 'html', 'HTML Document (OpenOffice.org Impress)', 'impress_html_Export') ### 43
+fmts.add('presentation', 'html', 'htm', 'HTML Document (OpenOffice.org Impress)', 'impress_html_Export') ### 43
 fmts.add('presentation', 'jpg', 'jpg', 'Joint Photographic Experts Group', 'impress_jpg_Export') ### 19
 fmts.add('presentation', 'met', 'met', 'OS/2 Metafile', 'impress_met_Export') ### 20
 fmts.add('presentation', 'odg', 'odg', 'ODF Drawing (Impress)', 'impress8_draw') ### 29
@@ -488,8 +516,23 @@ fmts.add('presentation', 'tiff', 'tiff', 'Tagged Image File Format', 'impress_ti
 fmts.add('presentation', 'uop', 'uop', 'Unified Office Format presentation', 'UOF presentation') ### 4
 fmts.add('presentation', 'vor', 'vor', 'StarImpress 5.0 Template', 'StarImpress 5.0 Vorlage') ### 40
 fmts.add('presentation', 'wmf', 'wmf', 'Windows Metafile', 'impress_wmf_Export') ### 11
+fmts.add('presentation', 'xhtml', 'html', 'XHTML', 'XHTML Impress File') ### 33
+fmts.add('presentation', 'xhtml', 'htm', 'XHTML', 'XHTML Impress File') ### 33
+fmts.add('presentation', 'xhtml', 'xht', 'XHTML', 'XHTML Impress File') ### 33
+fmts.add('presentation', 'xhtml', 'xhtml', 'XHTML', 'XHTML Impress File') ### 33
 fmts.add('presentation', 'xhtml', 'xml', 'XHTML', 'XHTML Impress File') ### 33
 fmts.add('presentation', 'xpm', 'xpm', 'X PixMap', 'impress_xpm_Export') ### 10
+
+### FormulaProperties
+#fmts.add('formula', '', '', 'MathType3.x', 'MathType 3.x') ### 4
+fmts.add('formula', 'mml', 'mml', 'MathML 1.01', 'MathML XML (Math)') ### 8
+fmts.add('formula', 'odf', 'odf', 'ODF Formula', 'math8') ### 9
+fmts.add('formula', 'pdf', 'pdf', 'PDF - Portable Document Format', 'math_pdf_Export') ### 7
+fmts.add('formula', 'smf', 'smf', 'StarMath 5.0', 'StarMath 5.0') ### 2
+fmts.add('formula', 'sxm', 'sxm', 'OpenOffice.org 1.0 Formula', 'StarOffice XML (Math)') ### 3
+
+### OfficeDatabaseDocument
+fmts.add('database', 'odb', 'odb', 'ODF Database', 'StarOffice XML (Base)') ### 1
 
 class Options:
     def __init__(self, args):
@@ -716,7 +759,8 @@ class Options:
 unoconv options:
   -c, --connection=string             use a custom connection string
   -d, --doctype=type                  specify document type
-                                        (document, graphics, presentation, spreadsheet)
+                                        (document, web, global, spreadsheet,
+                                         graphics, presentation, formula, database)                                        
   -e, --export=name=value             set export filter options
                                         eg. -e PageRange=1-2
   -f, --format=format                 specify the output format
