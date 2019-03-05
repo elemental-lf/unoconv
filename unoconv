@@ -364,10 +364,14 @@ fmts = FmtList()
 ### TextDocument
 fmts.add('document', 'bib', 'bib', 'BibTeX', 'org.openoffice.da.writer2bibtex') ### 22
 fmts.add('document', 'doc', 'doc', 'Microsoft Word 97/2000/XP', 'MS Word 97') ### 29
+fmts.add('document', 'docm', 'docm', 'Microsoft Word 97/2000/XP (marcos enabled)', 'MS Word 97')
+fmts.add('document', 'dot', 'dot', 'Microsoft Word 97/2000/XP Template', 'MS Word 97')
+fmts.add('document', 'dotm', 'dotm', 'Microsoft Word 97/2000/XP Template (marcos enabled)', 'MS Word 97')
 fmts.add('document', 'doc6', 'doc', 'Microsoft Word 6.0', 'MS WinWord 6.0') ### 24
 fmts.add('document', 'doc95', 'doc', 'Microsoft Word 95', 'MS Word 95') ### 28
 fmts.add('document', 'docbook', 'xml', 'DocBook', 'DocBook File') ### 39
 fmts.add('document', 'docx', 'docx', 'Microsoft Office Open XML', 'Office Open XML Text')
+fmts.add('document', 'dotx', 'dotx', 'Microsoft Office Open XML Template', 'Office Open XML Text')
 fmts.add('document', 'docx7', 'docx', 'Microsoft Office Open XML', 'MS Word 2007 XML')
 fmts.add('document', 'fodt', 'fodt', 'OpenDocument Text (Flat XML)', 'OpenDocument Text Flat XML')
 fmts.add('document', 'html', 'html', 'HTML Document (OpenOffice.org Writer)', 'HTML (StarWriter)') ### 3
@@ -438,9 +442,11 @@ fmts.add('spreadsheet', 'xhtml', 'xht', 'XHTML', 'XHTML Calc File') ### 26
 fmts.add('spreadsheet', 'xhtml', 'xhtml', 'XHTML', 'XHTML Calc File') ### 26
 fmts.add('spreadsheet', 'xhtml', 'xml', 'XHTML', 'XHTML Calc File') ### 26
 fmts.add('spreadsheet', 'xls', 'xls', 'Microsoft Excel 97/2000/XP', 'MS Excel 97') ### 12
+fmts.add('spreadsheet', 'xlsm', 'xlsm', 'Microsoft Excel 97/2000/XP Macros Enable', 'MS Excel 97')
 fmts.add('spreadsheet', 'xls5', 'xls', 'Microsoft Excel 5.0', 'MS Excel 5.0/95') ### 8
 fmts.add('spreadsheet', 'xls95', 'xls', 'Microsoft Excel 95', 'MS Excel 95') ### 10
 fmts.add('spreadsheet', 'xlt', 'xlt', 'Microsoft Excel 97/2000/XP Template', 'MS Excel 97 Vorlage/Template') ### 6
+fmts.add('spreadsheet', 'xltm', 'xltm', 'Microsoft Excel 97/2000/XP Template (marcos enabled)', 'MS Excel 97 Vorlage/Template')
 fmts.add('spreadsheet', 'xlt5', 'xlt', 'Microsoft Excel 5.0 Template', 'MS Excel 5.0/95 Vorlage/Template') ### 28
 fmts.add('spreadsheet', 'xlt95', 'xlt', 'Microsoft Excel 95 Template', 'MS Excel 95 Vorlage/Template') ### 21
 fmts.add('spreadsheet', 'xlsx', 'xlsx', 'Microsoft Excel 2007/2010 XML', 'Calc MS Excel 2007 XML')
@@ -503,7 +509,9 @@ fmts.add('presentation', 'pot', 'pot', 'Microsoft PowerPoint 97/2000/XP Template
 fmts.add('presentation', 'ppm', 'ppm', 'Portable Pixelmap', 'impress_ppm_Export') ### 26
 fmts.add('presentation', 'pptx', 'pptx', 'Microsoft PowerPoint 2007/2010 XML', 'Impress MS PowerPoint 2007 XML') ### 36
 fmts.add('presentation', 'pps', 'pps', 'Microsoft PowerPoint 97/2000/XP (Autoplay)', 'MS PowerPoint 97 Autoplay') ### 36
+fmts.add('presentation', 'ppsm', 'ppsm', 'Microsoft PowerPoint 97/2000/XP (Autoplay) (marcos enabled)', 'MS PowerPoint 97 Autoplay')
 fmts.add('presentation', 'ppt', 'ppt', 'Microsoft PowerPoint 97/2000/XP', 'MS PowerPoint 97') ### 36
+fmts.add('presentation', 'pptm', 'pptm', 'Microsoft PowerPoint 97/2000/XP (marcos enabled)', 'MS PowerPoint 97')
 fmts.add('presentation', 'pwp', 'pwp', 'PlaceWare', 'placeware_Export') ### 30
 fmts.add('presentation', 'ras', 'ras', 'Sun Raster Image', 'impress_ras_Export') ### 27
 fmts.add('presentation', 'sda', 'sda', 'StarDraw 5.0 (OpenOffice.org Impress)', 'StarDraw 5.0 (StarImpress)') ### 8
