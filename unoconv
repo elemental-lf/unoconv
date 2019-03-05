@@ -472,6 +472,7 @@ fmts.add('graphics', 'pgm', 'pgm', 'Portable Graymap', 'draw_pgm_Export') ### 11
 fmts.add('graphics', 'png', 'png', 'Portable Network Graphic', 'draw_png_Export') ### 2
 fmts.add('graphics', 'ppm', 'ppm', 'Portable Pixelmap', 'draw_ppm_Export') ### 5
 fmts.add('graphics', 'ras', 'ras', 'Sun Raster Image', 'draw_ras_Export') ## 31
+fmts.add('graphics', 'sda', 'sda', 'StarDraw 5.0 (OpenOffice.org Impress)', 'StarDraw 5.0 (StarImpress)') ### 8
 fmts.add('graphics', 'std', 'std', 'OpenOffice.org 1.0 Drawing Template', 'draw_StarOffice_XML_Draw_Template') ### 53
 fmts.add('graphics', 'svg', 'svg', 'Scalable Vector Graphics', 'draw_svg_Export') ### 50
 fmts.add('graphics', 'svm', 'svm', 'StarView Metafile', 'draw_svm_Export') ### 55
@@ -514,7 +515,6 @@ fmts.add('presentation', 'ppt', 'ppt', 'Microsoft PowerPoint 97/2000/XP', 'MS Po
 fmts.add('presentation', 'pptm', 'pptm', 'Microsoft PowerPoint 97/2000/XP (marcos enabled)', 'MS PowerPoint 97')
 fmts.add('presentation', 'pwp', 'pwp', 'PlaceWare', 'placeware_Export') ### 30
 fmts.add('presentation', 'ras', 'ras', 'Sun Raster Image', 'impress_ras_Export') ### 27
-fmts.add('presentation', 'sda', 'sda', 'StarDraw 5.0 (OpenOffice.org Impress)', 'StarDraw 5.0 (StarImpress)') ### 8
 fmts.add('presentation', 'sti', 'sti', 'OpenOffice.org 1.0 Presentation Template', 'impress_StarOffice_XML_Impress_Template') ### 5
 fmts.add('presentation', 'svg', 'svg', 'Scalable Vector Graphics', 'impress_svg_Export') ### 14
 fmts.add('presentation', 'svm', 'svm', 'StarView Metafile', 'impress_svm_Export') ### 13
