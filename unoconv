@@ -899,7 +899,7 @@ class Convertor:
             importformat = fmts.byname(op.importfiltername)
 
         if not importformat:
-            error('unoconv: import format [%s] is not known to unoconv.' % op.importfiltername)
+            raise RuntimeError('import format [%s] is not known to unoconv.' % op.importfiltername)
 
         return importformat[0]
 
