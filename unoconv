@@ -383,6 +383,7 @@ fmts.add('document', 'ooxml', 'xml', 'Microsoft Office Open XML', 'MS Word 2003 
 fmts.add('document', 'ott', 'ott', 'Open Document Text', 'writer8_template') ### 21
 fmts.add('document', 'pdf', 'pdf', 'Portable Document Format', 'writer_pdf_Export') ### 18
 fmts.add('document', 'rtf', 'rtf', 'Rich Text Format', 'Rich Text Format') ### 16
+fmts.add('document', 'sdw', 'sdw', 'StarWriter 5.0', 'StarWriter 5.0') ### 23
 fmts.add('document', 'stw', 'stw', 'Open Office.org 1.0 Text Document Template', 'writer_StarOffice_XML_Writer_Template') ### 9
 fmts.add('document', 'sxw', 'sxw', 'Open Office.org 1.0 Text Document', 'StarOffice XML (Writer)') ### 1
 fmts.add('document', 'text', 'txt', 'Text Encoded', 'Text (encoded)') ### 26
@@ -432,6 +433,7 @@ fmts.add('spreadsheet', 'ods', 'ods', 'ODF Spreadsheet', 'calc8') ### 15
 fmts.add('spreadsheet', 'ooxml', 'xml', 'Microsoft Excel 2003 XML', 'MS Excel 2003 XML') ### 23
 fmts.add('spreadsheet', 'ots', 'ots', 'ODF Spreadsheet Template', 'calc8_template') ### 14
 fmts.add('spreadsheet', 'pdf', 'pdf', 'Portable Document Format', 'calc_pdf_Export') ### 34
+fmts.add('spreadsheet', 'sdc', 'sdc', 'StarCalc 5.0', 'StarCalc 5.0') ### 31
 fmts.add('spreadsheet', 'slk', 'slk', 'SYLK', 'SYLK') ### 35
 fmts.add('spreadsheet', 'stc', 'stc', 'OpenOffice.org 1.0 Spreadsheet Template', 'calc_StarOffice_XML_Calc_Template') ### 2
 fmts.add('spreadsheet', 'sxc', 'sxc', 'OpenOffice.org 1.0 Spreadsheet', 'StarOffice XML (Calc)') ### 3
@@ -516,6 +518,7 @@ fmts.add('presentation', 'pptm', 'pptm', 'Microsoft PowerPoint 97/2000/XP (marco
 fmts.add('presentation', 'pwp', 'pwp', 'PlaceWare', 'placeware_Export') ### 30
 fmts.add('presentation', 'ras', 'ras', 'Sun Raster Image', 'impress_ras_Export') ### 27
 fmts.add('presentation', 'sti', 'sti', 'OpenOffice.org 1.0 Presentation Template', 'impress_StarOffice_XML_Impress_Template') ### 5
+fmts.add('presentation', 'sdd', 'sdd', 'StarImpress 5.0', 'StarImpress 5.0') ### 6
 fmts.add('presentation', 'svg', 'svg', 'Scalable Vector Graphics', 'impress_svg_Export') ### 14
 fmts.add('presentation', 'svm', 'svm', 'StarView Metafile', 'impress_svm_Export') ### 13
 fmts.add('presentation', 'swf', 'swf', 'Macromedia Flash (SWF)', 'impress_flash_Export') ### 34
